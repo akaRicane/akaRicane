@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Philippe Guelen — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:    #1c2333;
+      --accent:  #3b82f6;
+      --muted:   #64748b;
+      --border:  #e2e8f0;
+      --bg:      #f8fafc;
+      --white:   #ffffff;
+      --text:    #1e293b;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── PAGE SHELL ── */
+    .page {
+      max-width: 960px;
+      margin: 24px auto;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 28px 36px 24px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -.4px;
+    }
+
+    header .title {
+      font-size: 13px;
+      font-weight: 400;
+      color: #93c5fd;
+      margin-top: 4px;
+      letter-spacing: .3px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+
+    .contact-links a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    .contact-links a:hover { text-decoration: underline; }
+
+    /* ── BODY GRID ── */
+    .body {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+    }
+
+    /* ── SIDEBAR ── */
+    aside {
+      background: #f1f5f9;
+      padding: 24px 20px;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ── MAIN ── */
+    main {
+      padding: 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── SKILLS ── */
+    .skill-group { margin-bottom: 10px; }
+    .skill-group:last-child { margin-bottom: 0; }
+
+    .skill-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 4px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .tag {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2px 6px;
+      font-size: 11px;
+      color: var(--text);
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item { margin-bottom: 10px; }
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-name {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .edu-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .edu-badge {
+      display: inline-block;
+      margin-top: 3px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    /* ── LANGUAGES ── */
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .lang-level { color: var(--muted); }
+
+    /* ── CERTS ── */
+    .cert-item {
+      font-size: 11px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .cert-item strong { display: block; font-size: 12px; }
+
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .exp-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .exp-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+
+    .exp-role {
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+
+    .exp-date {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .exp-company {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .exp-company span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    ul.bullets li {
+      padding-left: 12px;
+      position: relative;
+      font-size: 12px;
+      color: #334155;
+    }
+
+    ul.bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .tech-line {
+      margin-top: 5px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .tech-line strong { color: var(--text); font-weight: 500; }
+
+    /* ── SUMMARY ── */
+    .summary {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.6;
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    /* ── PUBLICATIONS ── */
+    .pub-item {
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+
+    .pub-item:last-child { margin-bottom: 0; }
+
+    .pub-title { font-weight: 600; }
+    .pub-meta { color: var(--muted); font-size: 11px; }
+
+    /* ── SIDE PROJECTS ── */
+    .project-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+
+    .project-item:last-child { margin-bottom: 0; }
+
+    .project-name { font-weight: 600; white-space: nowrap; }
+    .project-desc { color: #334155; }
+
+    /* ── PRINT ── */
+    @media print {
+      body { background: white; font-size: 11.5px; }
+      .page { margin: 0; box-shadow: none; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      @page { margin: 0; size: A4; }
+    }
+
+    @media (max-width: 700px) {
+      .body { grid-template-columns: 1fr; }
+      aside { border-right: none; border-bottom: 1px solid var(--border); }
+      header { grid-template-columns: 1fr; }
+      .contact-links { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <div>
+      <h1>Philippe Guelen</h1>
+      <div class="title">Audio · Acoustic &amp; Full Stack Software Engineer</div>
+    </div>
+    <div class="contact-links">
+      <span>Paris, France</span>
+<a href="mailto:philippe.guelen@gmail.com">philippe.guelen@gmail.com</a>
+      <a href="https://linkedin.com/in/philippeguelen">linkedin.com/in/philippeguelen</a>
+      <a href="https://github.com/akaRicane">github.com/akaRicane</a>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- ══ SIDEBAR ══ -->
+    <aside>
+
+      <!-- Skills -->
+      <div>
+        <div class="section-title">Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-label">Audio & DSP</div>
+          <div class="tags">
+            <span class="tag">Acoustic measurements</span>
+            <span class="tag">Audio quality evaluation</span>
+            <span class="tag">Signal processing</span>
+            <span class="tag">Electroacoustics</span>
+            <span class="tag">Perceptual testing</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Software</div>
+          <div class="tags">
+            <span class="tag">TypeScript</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">C / C++</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">React</span>
+            <span class="tag">Electron</span>
+            <span class="tag">AdonisJS</span>
+            <span class="tag">Bash</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Infra & QA</div>
+          <div class="tags">
+            <span class="tag">Linux</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">JIRA</span>
+            <span class="tag">Confluence</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-label">Creative & Live</div>
+          <div class="tags">
+            <span class="tag">WebGL / GLSL</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">MIDI / DMX / OSC</span>
+            <span class="tag">TouchDesigner</span>
+            <span class="tag">Resolume</span>
+            <span class="tag">QLC+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+          <div class="edu-name">ENSIM — Engineering Degree</div>
+          <div class="edu-sub">Vibrations &amp; Acoustics · 2013–2018</div>
+          <div class="edu-sub">Université du Mans · Polytech network</div>
+          <div class="edu-sub" style="margin-top:2px; font-size:10.5px;">Backed by LAUM (UMR CNRS 6613) — largest acoustics lab in Europe</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-name">D2E — Diplôme Étudiant-Entrepreneur</div>
+          <div class="edu-sub">PEPITE · Le Mans Université · 2019</div>
+          <span class="edu-badge">18 / 20</span>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-name">Baccalauréat</div>
+          <div class="edu-sub">Lycée Saint-Louis, Saumur · 2013</div>
+          <span class="edu-badge">Mention Bien</span>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div>
+        <div class="section-title">Languages</div>
+        <div class="lang-row"><span>French</span><span class="lang-level">Native</span></div>
+        <div class="lang-row"><span>English</span><span class="lang-level">Professional</span></div>
+        <div class="lang-row"><span>Spanish</span><span class="lang-level">Basic</span></div>
+      </div>
+
+      <!-- Certifications -->
+      <div>
+        <div class="section-title">Certifications</div>
+        <div class="cert-item">
+          <strong>Dante Level 1</strong>
+          Audinate · Oct 2025 – Oct 2028
+        </div>
+        <div class="cert-item">
+          <strong>TOEIC 795</strong>
+          TOEIC® Program · 2015
+        </div>
+        <div class="cert-item">
+          <strong>C2i</strong>
+          Certificat Informatique et Internet · 2015
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ══ MAIN ══ -->
+    <main>
+
+      <!-- Summary -->
+      <div>
+        <p class="summary">
+          Multidisciplinary engineer at the intersection of acoustics, software, and live performance technology.
+          From building audio quality benchmarks at DXOMARK to spatial audio QA at Holophonix —
+          with a parallel track developing live creative coding software, VJing on stage, and shipping
+          full-stack web products. I build things end-to-end and care about every layer of the stack.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <div>
+        <div class="section-title">Experience</div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">QA &amp; User Support Engineer</div>
+            <div class="exp-date">Jan 2026 – present</div>
+          </div>
+          <div class="exp-company">HOLOPHONIX <span>· Paris · Spatial audio for performing arts (IRCAM / CNRS origins)</span></div>
+          <ul class="bullets">
+            <li>Head of QA — owns the full JIRA/Confluence stack, software ticket validation, bug tracking</li>
+            <li>Built internal QA tooling (Electron + TypeScript) for automated testing on macOS and Linux processors</li>
+            <li>Real-life audio testing in a multi-loudspeaker studio; QC bench for each unit produced or rented</li>
+            <li>Hardware &amp; Linux: leading processor product evolution, supplier communication, Ubuntu 22→24 migration, Dante PCIe card integration</li>
+            <li>User support: remote and on-site debugging, customer feedback loop into the roadmap</li>
+          </ul>
+          <div class="tech-line"><strong>Tech:</strong> Bash, TypeScript, Electron, Linux, JIRA, Confluence, Dante</div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Freelance — Audio Engineer &amp; Web Developer</div>
+            <div class="exp-date">Mar 2024 – Jan 2026</div>
+          </div>
+          <div class="exp-company">Self-employed <span>· France</span></div>
+          <ul class="bullets">
+            <li>Audio quality evaluation missions for consumer electronics; international team training</li>
+            <li>Web development, infrastructure and hosting (artistes-assistance.com, lbss.art, flagada.art)</li>
+          </ul>
+          <div class="tech-line"><strong>Tech:</strong> AdonisJS, TypeScript, React, PostgreSQL, Docker, Ansible, Terraform</div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Audio Quality Engineer → Audio Manager</div>
+            <div class="exp-date">Jan 2020 – Mar 2024</div>
+          </div>
+          <div class="exp-company">DXOMARK <span>· Boulogne-Billancourt · World's leading consumer electronics benchmark</span></div>
+          <ul class="bullets">
+            <li>Among the first engineers on the audio division, built from scratch after its Oct 2019 launch</li>
+            <li>Developed measurement protocols for smartphones, laptops, home speakers; client consulting with major OEMs</li>
+            <li>Built internal tooling: Python signal processing pipeline, scoring algorithms, MongoDB, GUI</li>
+            <li>Managed the audio division (9 people): recruitment, objectives, project allocation</li>
+            <li>2 papers published at AES conventions (2023) — incl. first author on ML paper</li>
+          </ul>
+          <div class="tech-line"><strong>Tech:</strong> Python, Qt, DSP, MongoDB, FFMpeg, Matlab</div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Acoustic Design Engineer</div>
+            <div class="exp-date">Apr – Dec 2019</div>
+          </div>
+          <div class="exp-company">Funky Sound Studio <span>· Paris · Debussy luxury smart headphones (Dolby partner, CES 2018)</span></div>
+          <ul class="bullets">
+            <li>Led electroacoustic performance development, vibro-acoustic modelling and tuning of the Debussy line</li>
+            <li>Product specs, market analysis, electronics sourcing, IP creation</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-header">
+            <div class="exp-role">Founder &amp; CEO</div>
+            <div class="exp-date">2018</div>
+          </div>
+          <div class="exp-company">Spell Audio <span>· Le Mans · Electro-acoustic startup (PEPITE program)</span></div>
+          <ul class="bullets">
+            <li>Designed and prototyped an omnidirectional autonomous electro-acoustic column from the ground up</li>
+            <li>Market analysis, funding, partnerships, CE certification</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Projects & Creative -->
+      <div>
+        <div class="section-title">Projects &amp; Side Work</div>
+        <div class="project-item">
+          <div class="project-name">LBSS.art / ASTAR</div>
+          <div class="project-desc">Built ASTAR — a live creative coding software (Electron/JS/WebGL/GLSL) used on stage across France and Belgium for VJing and scenography. Active performer, managed by Adequate Production, touring with Le Wanski.</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Course Poursuite</div>
+          <div class="project-desc">Co-founded artist collective (formerly Collectif Le Bol), now Marseille-based. Stage design, light shows, music production.</div>
+        </div>
+        <div class="project-item">
+          <div class="project-name">Open Source / Tools</div>
+          <div class="project-desc">filter-design-tool (loudspeaker DSP), enttec-dmx-python, adonis_solidts_template (web boilerplate), Integrate-P5-in-ReactJs — all public on GitHub.</div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div>
+        <div class="section-title">Publications — AES</div>
+        <div class="pub-item">
+          <div class="pub-title">Machine Learning: Predicting Audio Quality for high SPL Smartphone Recordings</div>
+          <div class="pub-meta">AES Convention 155 · Express Paper #130 · Oct 2023 · First author · DXOMARK</div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-title">Laboratory Evaluation of Smartphone Audio Zoom Systems</div>
+          <div class="pub-meta">AES Convention 154 · Express Paper #61 · May 2023 · DXOMARK</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
