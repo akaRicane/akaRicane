@@ -11,10 +11,10 @@ Runs on Electron, speaks WebGL/GLSL, listens to MIDI, controls DMX, reacts to au
 Currently used on stage across France and Belgium.
 
 
-**[LBSS.art](https://lbss.art)** — the project I perform under. VJing, scenography, light shows.
+**[LBSS.art](https://www.instagram.com/lbss.art/)** — the project I perform under. VJing, scenography, light shows.
 Managed by Adequate Production. Toured with Le Wanski, played Dour Festival, Zénith Lille, Reperkusound... *(on pause since 2026)*
 
-**[Course Poursuite](https://coursepoursuite.com)** — artist collective I co-founded. Marseille-based. Events, stage design, production.
+**[Course Poursuite](https://www.instagram.com/course.poursuite/)** — artist collective I co-founded. Marseille-based. Events, stage design, production.
 
 ---
 
@@ -44,4 +44,4 @@ software QA & test automation, hardware validation, embedded Linux R&D, manufact
 acoustics engineer by background (ENSIM, Vibrations & Acoustics).
 2 papers at AES conventions. 4 years at DXOMARK building the audio benchmark from scratch.
 
-[linkedin](https://linkedin.com/in/philippeguelen) · [lbss.art](https://lbss.art) · [adequateproduction.fr/artiste/lbss-art](https://adequateproduction.fr/artiste/lbss-art/)
+[linkedin](https://linkedin.com/in/philippeguelen) · [lbss.art](https://www.instagram.com/lbss.art/) · [course poursuite](https://www.instagram.com/course.poursuite/)

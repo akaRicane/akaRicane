@@ -7,7 +7,7 @@
 
 Artist collective and event production. Originally based in north-west France as **Collectif Le Bol**, rebranded and relocated to **Marseille** in early 2025 as **Course Poursuite**.  
 Focus areas: Scenography, Music Production, DJ.  
-Website: www.coursepoursuite.com
+Instagram: https://www.instagram.com/course.poursuite/
 
 ### Association Supercheap
 **President & Co-founder | June 2015 – June 2019**
