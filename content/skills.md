@@ -21,7 +21,8 @@
 
 ## Hardware Domains
 - Embedded systems (µ-controller)
-- Hardware validation & QC
+- Hardware validation, QC & qualification (benchmarking, endurance, thermal)
+- Low-level diagnostics (boot, BIOS/UEFI, drivers)
 - Electronics prototyping & soldering
 - LED integration (strips, matrices, DMX)
 - Stage structure design & fabrication
@@ -58,7 +59,7 @@ LED integration (strips, matrices, serial / DMX)
 Embedded Linux (custom distros, system configuration)
 
 ### Network & Infra
-Docker, Kubernetes, Ansible, Terraform, Coolify, VPS, DNS, AWS, SysAdmin
+Docker, Kubernetes, Ansible, Terraform, Coolify, VPS, DNS, AWS, SysAdmin, PXE/iPXE, CI/CD, real-time Linux kernel tuning, Grafana, Prometheus, Loki
 
 ### Architecture & Tools
 Git, Linux, MongoDB, PostgreSQL, FFMpeg, LaTeX

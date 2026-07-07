@@ -1,34 +1,43 @@
 # Professional Experience
 
-## Holophonix — Embedded Systems Engineer & Head of Support
+## Holophonix — Platform & Support Engineer
 **Paris, Île-de-France, France | January 2026 – present | CDI, on-site**
+**Hired as Quality Assurance & Support Engineer, retitled Platform & Support Engineer from June 2026 via contract amendment, formalizing an expanded scope.**
 
 Cross-domain ownership of quality, hardware, Linux R&D, and user experience for the HOLOPHONIX spatial audio platform — a professional spatial sound processor running a custom Linux stack. Role progressively expanded to cover the full technical operations scope of the company, bridging software QA, embedded hardware, manufacturing, and field support.
 
 ### Quality Assurance — Software
 - Built and manages the full tracking stack: JIRA and Confluence refactoring, cleanup, and ongoing management
 - Validates all software tickets produced by the dev team
-- Develops internal QA tooling — own Electron/TypeScript app — to automate and structure testing
+- Develops internal QA tooling — own Electron/TypeScript app + bash scripting toolbox — to automate and structure testing
 - Tests run both on macOS (HOLOPHONIX Native) and on the Linux-based processors
 - Includes real-life audio testing in the company's multi-loudspeaker studio
 - Tracks and prioritises bugs; ensures software progression is unblocked
 - Bash + TypeScript as primary scripting and tooling languages
 
-### Hardware & Linux R&D
+### Hardware & Linux R&D / Systems Engineering
 - Leading product evolution and hardware variants definition
 - Communication with component suppliers and manufacturing partner (Amadeus)
 - Manages a dedicated JIRA board tracking Linux and hardware improvements, including:
-  - Ubuntu 22 → 24 migration
+  - Ubuntu 22 → 26 migration
   - DEP (deployment/embedded platform) version upgrade
   - Integration of Dante PCIe hardware extension cards
 - Focus on product-level decisions and system integration
+- Maintains, evolves, and secures the processors' real-time Linux OS (RT kernel, drivers, updates, dependencies)
+- Tunes the system for real-time audio: RT kernel config, CPU priorities, hardware interrupts, power policies — deterministic latency, no service interruptions
+- Industrializes machine provisioning: PXE/iPXE boot pipelines, system images, automated configuration via Ansible
+- Builds and maintains CI/CD pipelines for build, boot tests, performance tests, and image conformance
+- Qualifies and selects hardware platforms (processors, motherboards, network/storage/audio interfaces) via benchmarking
+- Diagnoses and resolves low-level system issues (boot, BIOS/UEFI compatibility, driver/hardware stability)
 
 ### Manufacturing & Quality Control
 - Created and owns the QC bench for processor validation
 - Validates each unit produced or prepared for rental before shipment
+- Runs pre-market QC on processors: performance, endurance, thermal stability, functional conformance
 - Enforces quality standards across the production and rental pipeline
 - Procurement and rental fleet management
 - Building tooling and documentation for handoff to incoming manufacturing technician
+- Deployment of monitoring stack (Grafana + Prometeus + Loki) for in-house processors
 
 ### User Support
 - Deep product knowledge enables remote and on-site debugging
