@@ -34,7 +34,7 @@ infra     →  Docker · Ansible · Terraform · Coolify · AWS
 
 ### currently
 
-embedded systems engineer & head of support at **[HOLOPHONIX](https://holophonix.xyz)** — spatial audio processors for concert halls, theaters, and installations.
+embedded platform engineer & head of support at **[HOLOPHONIX](https://holophonix.xyz)** — spatial audio processors for concert halls, theaters, and installations.
 software QA & test automation, hardware validation, embedded Linux R&D, manufacturing coordination, field support.
 
 ---
