@@ -6,7 +6,7 @@ My background is in acoustics — vibrations, electro-acoustics, signal processi
 
 Now I'm at Holophonix as Platform & Support Engineer. The scope is wide: product development, software QA and test automation, real-time Linux systems, hardware validation and provisioning, manufacturing coordination, field support. I built my own QA tooling in Electron/TypeScript and run the QC bench that validates every unit before shipment. It's less a defined role and more end-to-end ownership of whatever keeps the product reliable and the team unblocked.
 
-Outside of that I've been building ASTAR for the past few years — a live creative coding environment I designed and perform with on stage. VJing and stage design across France and Belgium. I also take on software and web development work — full-stack, TypeScript-oriented. Same problem-solving instinct, different outputs.
+Outside of that I've been building ASTAR for the past few years — a live creative coding environment I designed and perform with on stage. VJing and stage design across France and Belgium. I also take on software and web development work — full-stack, TypeScript-oriented — and I run my own hosting infrastructure for it. Lately I've been writing audio plugins in C++/JUCE, which is the two halves of my background finally landing in the same file. Same problem-solving instinct, different outputs.
 
 ---
 
@@ -16,7 +16,7 @@ Mon parcours est ancré dans l'acoustique — vibrations, électroacoustique, tr
 
 Aujourd'hui je suis chez Holophonix en tant qu'Ingénieur Platform & Support. Le périmètre est large : développement produit, assurance qualité logicielle et automatisation des tests, systèmes Linux temps réel, validation et provisioning hardware, coordination manufacturing, support terrain. J'ai développé mes propres outils QA en Electron/TypeScript et je gère le banc de contrôle qualité qui valide chaque unité avant expédition. C'est moins un rôle défini qu'une responsabilité bout-en-bout sur tout ce qui maintient le produit fiable et l'équipe opérationnelle.
 
-En parallèle, je travaille depuis quelques années sur ASTAR — un environnement de live creative coding que j'ai conçu et avec lequel je performe sur scène. VJing et scénographie en France et en Belgique. Je prends aussi des missions de développement web et logiciel — full-stack, orienté TypeScript. Le même instinct de résolution de problèmes, des outputs différents.
+En parallèle, je travaille depuis quelques années sur ASTAR — un environnement de live creative coding que j'ai conçu et avec lequel je performe sur scène. VJing et scénographie en France et en Belgique. Je prends aussi des missions de développement web et logiciel — full-stack, orienté TypeScript — et j'administre ma propre infrastructure d'hébergement. Depuis peu j'écris des plugins audio en C++/JUCE, là où les deux moitiés de mon parcours se retrouvent enfin dans le même fichier. Le même instinct de résolution de problèmes, des outputs différents.
 
 ---
 

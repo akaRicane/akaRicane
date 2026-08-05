@@ -68,6 +68,7 @@ Multiple repos forming the full lifecycle from beta to distribution.
 
 | Repo | Visibility | Stack | Description |
 |---|---|---|---|
+| `ricane-plugins` | public | C++, JUCE 8, CMake | Bank of audio plugins built to learn plugin dev from the ground up — Gain, Panner, Delay. Each plugin self-contained (own `CMakeLists.txt`), JUCE and pluginval as pinned submodules, docs split into setup / DSP theory / per-plugin / tooling. Started July 2026 |
 | `filter-design-tool` | public | CSS, HTML, JS, Python | Design loudspeaker filtering parameters |
 | `audio-electronjs` | public | HTML, JS | Audio tooling in Electron |
 | `audio-sandbox` | public | HTML, JS, Python, Shell | Multipurpose audio sandbox |
@@ -76,13 +77,38 @@ Multiple repos forming the full lifecycle from beta to distribution.
 
 ---
 
+## Games
+
+| Repo | Visibility | Stack | Description |
+|---|---|---|---|
+| `paris-metro-guessr` | public | Vanilla JS, Leaflet, Python (build scripts) | Pin-the-station map game on the Paris métro/RER network. Live at [lutece-guessr.ricane.dev](https://lutece-guessr.ricane.dev). Started July 2026 |
+
+No framework, no build step — ~2.9k lines split so the rules (`game.js`) and the maths (`geo.js`)
+are pure and testable without DOM or Leaflet. Data is generated from Île-de-France Mobilités open
+data: 536 stations, 660 track segments, plus the IGN Paris commune contour for the intra-muros
+pool. Geometry is simplified with Douglas-Peucker to the point where it stays visually and
+*logically* identical (the boundary ring is validated against the full-resolution point-in-polygon
+verdict for all 536 stations). Bilingual EN/FR, exponential-decay scoring, deathmatch modes,
+label-free basemap so the tiles can't leak the answer.
+
+---
+
 ## Infrastructure
 
 | Repo / Project | Visibility | Stack | Description |
 |---|---|---|---|
 | `infraweb` | private | Dockerfile, HCL (Terraform), Jinja, Ansible, Shell | Full infra-as-code for personal cloud: VPS, Coolify, DNS, deployments |
+| `admin` | local | Shell, Docker Compose, MCP | Operating repo for the web infrastructure I run — Coolify CLI wrapper, monitoring stacks, runbooks. Started August 2026 |
 
 Local structure: `infraweb/` contains `ansible/`, `apps/`, `infra-lbss/`, `sandbox/`, `local.debian`
+
+`admin/` is the day-to-day operations counterpart to `infraweb/`'s provisioning: one folder per
+administered system (`coolify/` first), a token-safe CLI wrapper, a Coolify MCP server wired into
+Claude Code, a pre-commit secret scanner, and committed docs that carry names and public domains
+only — IPs and UUIDs stay in a gitignored inventory. Estate today: 3 nodes, 8 projects, 7 apps,
+9 services. Monitoring is Prometheus + blackbox + Loki + Grafana with agents on all three nodes,
+Alpha and Beta reaching the master over WireGuard, nothing exposed publicly but Grafana. Umami
+for website analytics.
 
 ---
 

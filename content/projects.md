@@ -1,5 +1,70 @@
 # Projects
 
+## ricane-plugins — JUCE Audio Plugin Bank
+**Since July 2026** — [github.com/akaRicane/ricane-plugins](https://github.com/akaRicane/ricane-plugins) (public, MIT)
+
+A personal bank of audio plugins built with JUCE 8, written to learn plugin development from the
+ground up — one self-contained plugin at a time, clarity over cleverness, with the theory written
+down alongside the code.
+
+- **GainPlugin** — decibel volume control, click-free via `juce::dsp::Gain` smoothing
+- **PannerPlugin** — mono/stereo in → stereo out, −6 dB pan law, per-sample smoothing
+- **DelayPlugin** — first time-based plugin: ring buffer, interpolated reads, tape-style time
+  smoothing, dry/wet
+- Each plugin builds in isolation (own `CMakeLists.txt`, no cross-dependencies); JUCE 8.0.13 and
+  pluginval are pinned git submodules
+- `utils/` scripts for build, open, and host validation; documentation split into setup, DSP
+  theory (`knowledge/`), per-plugin pages, and tooling
+- Known gaps and next steps tracked in a roadmap chosen by *what it teaches*, not by product value
+
+**Tech:** C++, JUCE 8, CMake, pluginval, clang-format, DSP
+
+---
+
+## Paris Métro Guessr
+**Since July 2026** — [github.com/akaRicane/paris-metro-guessr](https://github.com/akaRicane/paris-metro-guessr) (public) · live at [lutece-guessr.ricane.dev](https://lutece-guessr.ricane.dev)
+
+A station is named, you pin it on the map, the closer you land the more you score. Vanilla JS and
+Leaflet, no framework and no build step.
+
+- Scoring decays exponentially with the miss (`5000·e^(−km/2.5)`), tuned to Paris scale
+- Five station pools (Paris intra muros, métro, RER-only, pick-your-lines, everything), four
+  difficulty/time settings, and a deathmatch mode with a draining life bar
+- Data generated from [Île-de-France Mobilités](https://data.iledefrance-mobilites.fr) open data:
+  536 stations (merged on interchange, with the genuinely-ambiguous names disambiguated), 660 track
+  segments simplified by Douglas-Peucker from 370 kB to 82 kB, and the IGN Paris commune contour
+  reduced 532 → 164 points while provably preserving the in/out verdict for every station
+- The real line geometry is drawn on the reveal in official IDFM colours — the point where it stops
+  being a quiz and starts teaching the map
+- Bilingual EN/FR (keys, not sentences, in the rules layer), label-free basemap so the tiles never
+  leak the answer, wall-clock timers so a backgrounded tab can't cheat
+- Self-hosted on my own Coolify estate, with Umami analytics
+
+**Tech:** JavaScript (vanilla), Leaflet, Python (data pipeline), HTML/CSS, geospatial processing
+
+---
+
+## Personal Infrastructure — `admin`
+**Since August 2026** — private, local
+
+Operating repo for the web infrastructure I own and run: the day-to-day counterpart to `infraweb`'s
+provisioning. One folder per administered system.
+
+- Token-safe Coolify CLI wrapper (never prints or argv-passes the token; writes require `--yes`)
+- Coolify MCP server wired into Claude Code
+- Full monitoring stack deployed as compose stacks: Prometheus + blackbox + Loki + Grafana, with
+  node-exporter/cadvisor/alloy agents on all three nodes, remote nodes reaching the master over
+  WireGuard, nothing but Grafana publicly exposed
+- Alerting rules including domain-expiry monitoring
+- Umami for website analytics
+- Pre-commit secret scanner (gitleaks-aware); committed docs carry names and public domains only,
+  with IPs and UUIDs confined to a gitignored inventory
+- Estate: 3 nodes, 8 projects, 7 applications, 9 services, 1 database
+
+**Tech:** Docker Compose, Coolify, Prometheus, Grafana, Loki, Alloy, WireGuard, Bash, Ansible, MCP
+
+---
+
 ## LBSS.art & ASTAR
 **2020 – 2025 (on pause since 2026)**
 

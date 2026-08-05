@@ -4,6 +4,7 @@
 - Acoustic measurements
 - Audio quality evaluation (perceptual & objective)
 - Audio processing / DSP
+- Audio plugin development (JUCE / VST3 / AU)
 - Electroacoustic product design
 - Prototyping & CAD
 - Sourcing
@@ -46,6 +47,10 @@ HTML, CSS, JavaScript, TypeScript, React.js, Solid.js, Next.js, Tailwind
 ### Back-End & Applications
 Node.js, Adonis.js, Python, C, C++, Electron.js
 
+### Audio Software
+JUCE 8 (VST3 / AU / Standalone), CMake, pluginval, real-time DSP (gain staging, pan laws,
+delay lines & interpolation, parameter smoothing)
+
 ### Creative / Visual
 three.js, p5.js, WebGL / OpenGL, shaders, GLSL  
 MIDI, DMX, OSC, UDP  
@@ -59,10 +64,14 @@ LED integration (strips, matrices, serial / DMX)
 Embedded Linux (custom distros, system configuration)
 
 ### Network & Infra
-Docker, Kubernetes, Ansible, Terraform, Coolify, VPS, DNS, AWS, SysAdmin, PXE/iPXE, CI/CD, real-time Linux kernel tuning, Grafana, Prometheus, Loki
+Docker, Docker Compose, Kubernetes, Ansible, Terraform, Coolify, VPS, DNS, AWS, SysAdmin, PXE/iPXE, CI/CD, real-time Linux kernel tuning, Grafana, Prometheus, Loki, Alloy, blackbox exporter, WireGuard, Umami
 
 ### Architecture & Tools
-Git, Linux, MongoDB, PostgreSQL, FFMpeg, LaTeX
+Git, Linux, MongoDB, PostgreSQL, FFMpeg, LaTeX, MCP (Model Context Protocol) servers
+
+### Geospatial
+Leaflet, open data pipelines (IDFM, IGN / geo.api.gouv.fr), GeoJSON, haversine, point-in-polygon,
+Douglas-Peucker simplification
 
 ### Scientific / DSP
 Python (NumPy, SciPy, ...), Matlab, DSP, signal processing algorithms
@@ -100,4 +109,5 @@ Microsoft Office, Agile / Scrum
 ## Currently Exploring
 - Kubernetes (K8S) infrastructure migration
 - Application development with Rust & Tauri
-- Audio plugin development (JUCE)
+- Audio plugin development (JUCE) — *active since July 2026, see `ricane-plugins`*: three plugins
+  shipped, next up feedback delay and the Gin module set

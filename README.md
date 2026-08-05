@@ -18,16 +18,27 @@ Managed by Adequate Production. Toured with Le Wanski, played Dour Festival, Zé
 
 ---
 
+### lately
+
+**[ricane-plugins](https://github.com/akaRicane/ricane-plugins)** — a bank of JUCE 8 audio plugins, written to learn plugin development from the ground up.
+Gain, panner, delay so far. Each one self-contained, each one documented with the DSP theory behind it.
+
+**[Paris Métro Guessr](https://lutece-guessr.ricane.dev)** — a station is named, you pin it on the map, the closer you land the more you score.
+Vanilla JS and Leaflet, no build step. 536 stations and the real track geometry, generated from IDFM and IGN open data. [source](https://github.com/akaRicane/paris-metro-guessr)
+
+---
+
 ### stack
 
 ```
 lang      →  TypeScript · JavaScript · Python · C / C++  · Bash
 runtime   →  Node.js · Electron · Linux (embedded)
 web       →  AdonisJS · React · Solid.js · Tailwind
-visual    →  WebGL · GLSL · three.js · p5.js
+visual    →  WebGL · GLSL · three.js · p5.js · Leaflet
+audio     →  JUCE · CMake · DSP · NumPy/SciPy
 live      →  MIDI · DMX · OSC · Resolume · TouchDesigner · QLC+
 hardware  →  Raspberry Pi · Arduino · STM32 · soldering · Embedded Linux
-infra     →  Docker · Ansible · Terraform · Coolify · AWS
+infra     →  Docker · Ansible · Terraform · Coolify · AWS · Grafana/Prometheus/Loki
 ```
 
 ---
